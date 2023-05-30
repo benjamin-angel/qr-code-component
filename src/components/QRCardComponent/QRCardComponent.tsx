@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
-import './qrCode.css';
 
 const QRCardComponent = () => {
   return (
@@ -10,7 +9,6 @@ const QRCardComponent = () => {
       justifyContent='space-between'
       bgColor='hsl(0, 0%, 100%)'
       borderRadius='20px'
-      // boxShadow='0px 0px 14px 5px rgba(0,0,0,0.16)'
       width='300px'
       height='470px'
       position='relative'
@@ -22,7 +20,6 @@ const QRCardComponent = () => {
         width='576'
         sizes='(min-width: 60em) 24vw,(min-width: 28em) 45vw,100vw'
         src={'/image-qr-code.png'}
-        // position='inherit'
         style={{
           borderRadius: '10px',
           objectFit: 'contain',
