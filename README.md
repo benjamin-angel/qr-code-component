@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - QR code component solution
 
-## Getting Started
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### Screenshot
+
+![](./component.gif)
+
+### Links
+
+- Live Site URL: [Add live site URL here](https://qr-code-component-mocha-omega.vercel.app/)
+
+### Built with
+
+- Next.js
+- Chakra-ui
+- [Next.js](https://nextjs.org/) - Javascript framework
+- [Chakra-ui](https://chakra-ui.com/) - Component library
+
+### What I learned
+
+I learnt how the next.js image optimizations work using the `sizes` prop. Depending on screen width, you can see here that I am telling next.js to provide a different sized image each time. This means that smaller versions of the images are served to smaller screens, reducing the file size and loading time.
+
+```javascript
+<Image
+  alt='qr code'
+  height='576'
+  width='576'
+  sizes='(min-width: 60em) 24vw,(min-width: 28em) 45vw,100vw'
+  src={'/image-qr-code.png'}
+  style={{
+    borderRadius: '10px',
+    objectFit: 'contain',
+    height: 'auto',
+  }}
+/>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I also learned that Vercel really want you to use their platform for deploying to. (I had great issues trying to get next.js 13.4 to deploy to github)
